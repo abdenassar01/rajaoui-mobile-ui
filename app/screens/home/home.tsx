@@ -4,7 +4,29 @@ import React from 'react';
 const Home = () => {
   return (
     <View>
-      <Text>H</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
+      <Text>Home screen</Text>
     </View>
   );
 };
