@@ -1,12 +1,17 @@
+/* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../../screens/home/home';
+import NavigationIcon from '../../utils/navigationIcon/NavigationIcon';
+import {ThemeType} from '../../utils/theme';
+import {withTheme} from 'styled-components';
 
 type Props = {
   toggleTheme: () => void;
+  theme: ThemeType;
 };
 
-const TabNavigator = ({toggleTheme}: Props) => {
+const TabNavigator = ({toggleTheme, theme}: Props) => {
   const Tab = createBottomTabNavigator();
 
   return (
@@ -28,6 +33,16 @@ const TabNavigator = ({toggleTheme}: Props) => {
       <Tab.Screen
         name="Home"
         children={() => <Home toggleTheme={toggleTheme} />}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <NavigationIcon
+              theme={theme}
+              focused={focused}
+              label="Home"
+              icon="home"
+            />
+          ),
+        }}
       />
       <Tab.Screen
         name="HomeSe"
@@ -37,4 +52,4 @@ const TabNavigator = ({toggleTheme}: Props) => {
   );
 };
 
-export default TabNavigator;
+export default withTheme(TabNavigator);

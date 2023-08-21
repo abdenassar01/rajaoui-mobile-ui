@@ -4,7 +4,7 @@ import {withTheme} from 'styled-components';
 import {ThemeType} from '../../utils/theme';
 
 type Props = {
-  toggleTheme: () => void;
+  toggleTheme: any;
   theme?: ThemeType;
 };
 

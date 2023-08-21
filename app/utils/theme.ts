@@ -13,6 +13,8 @@ const appColors = {
   primary: '#0E5A4C',
   secondary: '#258082',
   tertiary: '#D4B33B',
+  white: 'white',
+  black: '#242526',
 };
 
 export const light: ThemeType = {
