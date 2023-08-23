@@ -21,12 +21,12 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
         tabBarShowLabel: false,
         tabBarStyle: {
           position: 'absolute',
-          bottom: 10,
-          left: 10,
-          right: 10,
+          bottom: 5,
+          left: 5,
+          right: 5,
           borderRadius: 10,
-          backgroundColor: '#0E5A4C',
-          elevation: 3,
+          backgroundColor: 'white',
+          elevation: 5,
           height: 50,
         },
       }}>
@@ -45,8 +45,46 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
         }}
       />
       <Tab.Screen
-        name="HomeSe"
+        name="Seting"
         children={() => <Home toggleTheme={toggleTheme} />}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <NavigationIcon
+              theme={theme}
+              focused={focused}
+              label="Settings"
+              icon="settings"
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Tools"
+        children={() => <Home toggleTheme={toggleTheme} />}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <NavigationIcon
+              theme={theme}
+              focused={focused}
+              label="Ideas"
+              icon="bulb"
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Construct"
+        children={() => <Home toggleTheme={toggleTheme} />}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <NavigationIcon
+              theme={theme}
+              focused={focused}
+              label="Tools"
+              icon="construct"
+            />
+          ),
+        }}
       />
     </Tab.Navigator>
   );

@@ -7,7 +7,8 @@ export const IconWrapper = styled(View)`
   align-items: center;
   position: absolute;
   border-radius: 50px;
-  width: 70px;
+  width: 50px;
+  height: 50px;
 `;
 
 export const Label = styled(MainText)`

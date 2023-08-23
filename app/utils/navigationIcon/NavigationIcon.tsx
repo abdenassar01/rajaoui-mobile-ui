@@ -16,8 +16,8 @@ export default function NavigationIcon({focused, label, icon, theme}: Props) {
     <IconWrapper
       style={{
         paddingTop: focused ? 10 : 0,
-        // backgroundColor: theme.text,
-        bottom: focused ? 5 : 0,
+        backgroundColor: 'white',
+        bottom: focused ? 20 : 0,
       }}>
       <Icon
         name={icon}
