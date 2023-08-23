@@ -6,4 +6,5 @@ export const Wrapper = styled(View)`
   align-items: center;
   width: 100%;
   background-color: ${({theme}) => theme.background};
+  flex: 1;
 `;

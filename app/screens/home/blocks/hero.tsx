@@ -1,7 +1,7 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-const hero = () => {
+const Hero = () => {
   return (
     <View>
       <Text>hero</Text>
@@ -9,4 +9,4 @@ const hero = () => {
   );
 };
 
-export default hero;
+export default Hero;

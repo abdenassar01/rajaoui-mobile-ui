@@ -5,6 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {ThemeProvider} from 'styled-components';
 import {dark, light} from './app/utils/theme';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {Wrapper} from './app/commun/utils/utils';
 
 function App(): JSX.Element {
   const [theme, setTheme] = useState<string>('light');

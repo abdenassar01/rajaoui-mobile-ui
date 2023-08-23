@@ -5,6 +5,7 @@ import {ThemeType} from '../../utils/theme';
 import {Container, MyText} from './home.style';
 import Header from '../../commun/header/header';
 import {Wrapper} from '../../commun/utils/utils';
+import Hero from './blocks/hero';
 
 type Props = {
   toggleTheme: () => void;
@@ -20,6 +21,7 @@ const Home = ({toggleTheme, theme}: Props) => {
           <Text style={{color: theme?.text}}>toggle</Text>
         </TouchableOpacity>
         <MyText>Home screen</MyText>
+        <Hero />
       </Container>
     </Wrapper>
   );

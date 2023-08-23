@@ -25,7 +25,7 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
           left: 5,
           right: 5,
           borderRadius: 10,
-          backgroundColor: 'white',
+          backgroundColor: theme.secondaryBackground,
           elevation: 5,
           height: 50,
         },
