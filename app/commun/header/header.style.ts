@@ -3,14 +3,17 @@ import {styled} from 'styled-components';
 import {MainText} from '../../utils/text';
 
 export const HeaderWrapper = styled(View)`
-  margin: 5px;
-  background-color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 10px 0;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  elevation: 5;
+  width: 90%;
+`;
+
+export const LineSeparator = styled(View)`
+  height: 2px;
+  width: 80%;
+  background-color: ${({theme}) => theme.primary};
 `;
 
 export const Logo = styled(Image)`
@@ -25,6 +28,7 @@ export const Avatar = styled(Image)`
 `;
 
 export const Title = styled(MainText)`
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 700;
   color: ${({theme}) => theme.primary};
 `;
