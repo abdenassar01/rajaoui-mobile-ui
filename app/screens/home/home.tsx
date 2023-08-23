@@ -2,19 +2,22 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {withTheme} from 'styled-components';
 import {ThemeType} from '../../utils/theme';
+import {MyText} from './home.style';
+import Header from '../../commun/header/header';
 
 type Props = {
-  toggleTheme: any;
+  toggleTheme: () => void;
   theme?: ThemeType;
 };
 
 const Home = ({toggleTheme, theme}: Props) => {
   return (
-    <View style={{backgroundColor: theme?.background}}>
+    <View>
+      <Header />
       <TouchableOpacity onPress={toggleTheme}>
         <Text style={{color: theme?.text}}>toggle</Text>
       </TouchableOpacity>
-      <Text>Home screen</Text>
+      <MyText>Home screen</MyText>
       <View style={{height: 200, width: 200, backgroundColor: '#33A357'}} />
     </View>
   );
