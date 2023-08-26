@@ -1,11 +1,29 @@
-import {View, Text} from 'react-native';
 import React from 'react';
+import {
+  BottomSection,
+  CardWrapper,
+  CenterSection,
+  HeroWrapper,
+  NameHeading,
+  ProfileSection,
+  TopSection,
+  UserAvatar,
+} from './hero.style';
 
 const Hero = () => {
   return (
-    <View>
-      <Text>hero</Text>
-    </View>
+    <HeroWrapper horizontal>
+      <CardWrapper source={{uri: 'https://i.imgur.com/mKZ1mN7.png'}}>
+        <TopSection>
+          <ProfileSection>
+            <UserAvatar source={{uri: 'https://i.imgur.com/s8tPu7r.jpg'}} />
+            <NameHeading>AbdeNassar Amimi</NameHeading>
+          </ProfileSection>
+        </TopSection>
+        <CenterSection />
+        <BottomSection />
+      </CardWrapper>
+    </HeroWrapper>
   );
 };
 
