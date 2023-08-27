@@ -20,7 +20,7 @@ const Home = ({toggleTheme, theme}: Props) => {
         <TouchableOpacity onPress={toggleTheme}>
           <Text style={{color: theme?.text}}>toggle</Text>
         </TouchableOpacity>
-        <MyText>Home screen</MyText>
+        <MyText>Complaint your cart</MyText>
         <Hero />
       </Container>
     </Wrapper>

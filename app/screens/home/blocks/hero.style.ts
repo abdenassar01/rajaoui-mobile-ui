@@ -8,23 +8,26 @@ export const CardWrapper = styled(ImageBackground)`
   height: 220px;
   padding: 10px;
   border-radius: 10px;
-  border-color: ${({theme}) => theme.secondary};
-  border-width: 2px;
-  background-color: ${({theme}) => theme.primary};
+  margin-right: 20px;
 `;
 export const ProfileSection = styled(View)``;
-export const TopSection = styled(View)``;
-export const CenterSection = styled(View)``;
+export const TopSection = styled(View)`
+  padding: 5px;
+`;
 export const BottomSection = styled(View)``;
 export const NameSection = styled(View)``;
 export const EagleImage = styled(Image)``;
 export const UserAvatar = styled(Image)`
   height: 70px;
   width: 70px;
-  border-radius: 50px;
+  border-radius: 5px;
 `;
 export const NameHeading = styled(MainText)`
   color: white;
+`;
+
+export const Label = styled(MainText)`
+  font-weight: bold;
 `;
 export const MainTextHeading = styled(MainText)``;
 export const HelperText = styled(MainText)``;
