@@ -1,4 +1,4 @@
-import {View, Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {withTheme} from 'styled-components';
 import {ThemeType} from '../../utils/theme';
@@ -20,7 +20,7 @@ const Home = ({toggleTheme, theme}: Props) => {
         <TouchableOpacity onPress={toggleTheme}>
           <Text style={{color: theme?.text}}>toggle</Text>
         </TouchableOpacity>
-        <MyText>Complaint your cart</MyText>
+        <MyText>Découvrez la nouvelle carte RAJAWE</MyText>
         <Hero />
       </Container>
     </Wrapper>

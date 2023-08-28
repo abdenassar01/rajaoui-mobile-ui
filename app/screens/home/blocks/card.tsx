@@ -11,25 +11,33 @@ import {
 } from './hero.style';
 import {StyleSheet} from 'react-native';
 
-const Card = () => {
+type Props = {
+  cover: string;
+  profile: string;
+  firstName: string;
+  lastName: string;
+  userId: string;
+  type?: string;
+};
+
+const Card = ({profile, firstName, lastName, userId}: Props) => {
   return (
     <CardWrapper
       imageStyle={styles.image}
-      blurRadius={5}
       resizeMode="cover"
-      source={require('../../../../assets/images/card-background.jpg')}>
+      source={require('../../../../assets/images/cards/subscription.png')}>
       <TopSection>
         <ProfileSection>
-          <UserAvatar source={{uri: 'https://i.imgur.com/s8tPu7r.jpg'}} />
+          <UserAvatar source={{uri: profile}} />
           <NameSection>
             <NameHeading>
-              <Label>Nom:</Label> AMIMI
+              <Label>Nom:</Label> {lastName}
             </NameHeading>
             <NameHeading>
-              <Label>Prenom:</Label> ABDENASSAR
+              <Label>Prenom:</Label> {firstName}
             </NameHeading>
             <NameHeading>
-              <Label>Id:</Label> 2022 1949
+              <Label>Id:</Label> {userId}
             </NameHeading>
           </NameSection>
         </ProfileSection>
