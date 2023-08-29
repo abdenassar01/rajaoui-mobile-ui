@@ -20,7 +20,7 @@ const Home = ({toggleTheme, theme}: Props) => {
         <TouchableOpacity onPress={toggleTheme}>
           <Text style={{color: theme?.text}}>toggle</Text>
         </TouchableOpacity>
-        <MyText>Découvrez la nouvelle carte RAJAWE</MyText>
+        <MyText>Become a member by getting your card rajawe </MyText>
         <Hero />
       </Container>
     </Wrapper>
