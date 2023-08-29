@@ -20,12 +20,12 @@ type Props = {
   type?: string;
 };
 
-const Card = ({profile, firstName, lastName, userId}: Props) => {
+const Card = ({profile, firstName, lastName, userId, cover}: Props) => {
   return (
     <CardWrapper
       imageStyle={styles.image}
       resizeMode="cover"
-      source={require('../../../../assets/images/cards/subscription.png')}>
+      source={{uri: cover}}>
       <TopSection>
         <ProfileSection>
           <UserAvatar source={{uri: profile}} />

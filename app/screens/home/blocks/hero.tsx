@@ -6,7 +6,7 @@ const Hero = () => {
   const cards = [
     {
       id: 1,
-      cover: '../../../../assets/images/cards/rajawe.png',
+      cover: 'https://i.imgur.com/MyTaWDO.jpg',
       profile: 'https://i.imgur.com/s8tPu7r.jpg',
       firstName: 'ABDENASSAR',
       lastName: 'AMIMI',
@@ -15,7 +15,8 @@ const Hero = () => {
     },
     {
       id: 2,
-      cover: '../../../../assets/images/cards/subscription.png',
+      cover: 'https://i.imgur.com/5lmSA5V.jpg',
+      // cover: '../../../../assets/images/cards/subscription.png',
       profile: 'https://i.imgur.com/s8tPu7r.jpg',
       firstName: 'ABDENASSAR',
       lastName: 'AMIMI',
