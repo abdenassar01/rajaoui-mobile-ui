@@ -5,6 +5,7 @@ import Home from '../../screens/home/home';
 import NavigationIcon from '../../utils/navigationIcon/NavigationIcon';
 import {ThemeType} from '../../utils/theme';
 import {withTheme} from 'styled-components';
+import Loading from '../../utils/loading/loading';
 
 type Props = {
   toggleTheme: () => void;
@@ -46,7 +47,7 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
       />
       <Tab.Screen
         name="Seting"
-        children={() => <Home toggleTheme={toggleTheme} />}
+        children={() => <Loading />}
         options={{
           tabBarIcon: ({focused}) => (
             <NavigationIcon

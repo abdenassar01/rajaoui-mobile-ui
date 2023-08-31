@@ -28,7 +28,6 @@ export const Avatar = styled(Image)`
 `;
 
 export const Title = styled(MainText)`
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 30px;
   color: ${({theme}) => theme.primary};
 `;
