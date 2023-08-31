@@ -34,6 +34,7 @@ export const NameHeading = styled(MainText)`
 
 export const Label = styled(MainText)`
   font-weight: bold;
+  color: ${({theme}) => theme.primary};
 `;
 export const MainTextHeading = styled(MainText)``;
 export const HelperText = styled(MainText)``;

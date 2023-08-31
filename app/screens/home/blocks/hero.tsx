@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './card';
-import {HeroWrapper} from './hero.style';
+import {HeroWrapper} from './home-blocks.style';
 
 const Hero = () => {
   const cards = [

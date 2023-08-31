@@ -8,7 +8,7 @@ import {
   ProfileSection,
   TopSection,
   UserAvatar,
-} from './hero.style';
+} from './home-blocks.style';
 import {StyleSheet} from 'react-native';
 
 type Props = {
