@@ -1,6 +1,9 @@
+import {UniqueTournomant} from './uniqueTournomant';
+
 type Tournament = {
   name: string;
   id: number;
+  uniqueTournament: UniqueTournomant;
 };
 
 type Round = {

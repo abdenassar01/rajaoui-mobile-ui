@@ -9,6 +9,7 @@ import {
   Staduim,
   TeamLogo,
   Time,
+  TournomentLogo,
   VersusText,
 } from './match-card.style';
 import {EventDetails} from '../../../types/eventDetails';
@@ -24,6 +25,11 @@ const MatchCard = ({match}: {match?: EventDetails}) => {
       // eslint-disable-next-line react-native/no-inline-styles
       imageStyle={{borderRadius: 10}}
       source={require('../../../assets/images/next-match-background.png')}>
+      <TournomentLogo
+        source={{
+          uri: `https://api.sofascore.com/api/v1/unique-tournament/${match?.tournament.uniqueTournament.id}/image`,
+        }}
+      />
       <EventDetailsWrapper>
         <TeamLogo
           source={{

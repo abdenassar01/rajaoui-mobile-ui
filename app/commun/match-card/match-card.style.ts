@@ -20,6 +20,16 @@ export const EventDetailsWrapper = styled(View)`
   bottom: 9%;
 `;
 
+export const TournomentLogo = styled(Image)`
+  width: 70px;
+  height: 70px;
+
+  position: absolute;
+  left: 12px;
+  bottom: 17%;
+  bottom: 9%;
+`;
+
 export const TeamLogo = styled(Image)`
   width: 35px;
   height: auto;
