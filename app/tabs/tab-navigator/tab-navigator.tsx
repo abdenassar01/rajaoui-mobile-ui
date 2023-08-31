@@ -34,7 +34,7 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
       }}>
       <Tab.Screen
         name="Home"
-        children={() => <Home toggleTheme={toggleTheme} />}
+        children={() => <Home />}
         options={{
           tabBarIcon: ({focused}) => (
             <NavigationIcon
@@ -62,7 +62,7 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
       />
       <Tab.Screen
         name="Tools"
-        children={() => <Home toggleTheme={toggleTheme} />}
+        children={() => <Home />}
         options={{
           tabBarIcon: ({focused}) => (
             <NavigationIcon
