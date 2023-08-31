@@ -7,6 +7,7 @@ import {ThemeType} from '../../utils/theme';
 import {withTheme} from 'styled-components';
 import Loading from '../../utils/loading/loading';
 import Settings from '../../screens/settings/settings';
+import Team from '../../screens/team/team';
 
 type Props = {
   toggleTheme: () => void;
@@ -47,15 +48,15 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
         }}
       />
       <Tab.Screen
-        name="Seting"
-        children={() => <Loading />}
+        name="Team"
+        children={() => <Team />}
         options={{
           tabBarIcon: ({focused}) => (
             <NavigationIcon
               theme={theme}
               focused={focused}
-              label="Settings"
-              icon="settings"
+              label="Team"
+              icon="football"
             />
           ),
         }}
