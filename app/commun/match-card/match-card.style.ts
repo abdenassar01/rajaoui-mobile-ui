@@ -16,7 +16,7 @@ export const EventDetails = styled(View)`
   max-width: 35%;
 
   position: absolute;
-  left: 21.3%;
+  left: 22.5%;
   bottom: 9%;
 `;
 
@@ -32,11 +32,11 @@ export const FixtureTime = styled(View)`
 `;
 
 export const Time = styled(MainText)`
-  font-size: 10px;
+  font-size: 8px;
 `;
 
 export const Date = styled(MainText)`
-  font-size: 12px;
+  font-size: 10px;
 `;
 
 export const MatchTeams = styled(View)`
