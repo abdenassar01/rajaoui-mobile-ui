@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Date,
-  EventDetails,
+  EventDetailsWrapper,
   FixtureTime,
   MatchCardWrapper,
   MatchTeams,
@@ -11,31 +11,42 @@ import {
   Time,
   VersusText,
 } from './match-card.style';
+import {EventDetails} from '../../../types/eventDetails';
+import {timstampToDate} from '../../utils/helpers/date-converter';
 
-const MatchCard = () => {
+const MatchCard = ({match}: {match?: EventDetails}) => {
+  const {date, time} = timstampToDate(
+    match?.time?.currentPeriodStartTimestamp || 0,
+  );
+
   return (
     <MatchCardWrapper
       // eslint-disable-next-line react-native/no-inline-styles
       imageStyle={{borderRadius: 10}}
       source={require('../../../assets/images/next-match-background.png')}>
-      <EventDetails>
+      <EventDetailsWrapper>
         <TeamLogo
-          source={{uri: 'https://api.sofascore.com/api/v1/team/41757/image'}}
+          source={{
+            uri: `https://api.sofascore.com/api/v1/team/${match?.homeTeam.id}/image`,
+          }}
         />
         <FixtureTime>
-          <Date>12 Fev - </Date>
-          <Time>12:00</Time>
+          <Date>{date} - </Date>
+          <Time>{time}</Time>
         </FixtureTime>
         <TeamLogo
-          source={{uri: 'https://api.sofascore.com/api/v1/team/41757/image'}}
+          source={{
+            uri: `https://api.sofascore.com/api/v1/team/${match?.awayTeam.id}/image`,
+          }}
         />
-      </EventDetails>
+      </EventDetailsWrapper>
       <MatchTeams>
         <OpenentsNamesHeading>
-          Raja CA
-          <VersusText> VS </VersusText>AS FAR
+          {match?.homeTeam.shortName}
+          <VersusText> VS </VersusText>
+          {match?.awayTeam.shortName}
         </OpenentsNamesHeading>
-        <Staduim>Complexe Mohamed V</Staduim>
+        <Staduim>{match?.venue?.stadium?.name}</Staduim>
       </MatchTeams>
     </MatchCardWrapper>
   );

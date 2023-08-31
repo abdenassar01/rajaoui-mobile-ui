@@ -10,7 +10,7 @@ export const MatchCardWrapper = styled(ImageBackground)`
   position: relative;
 `;
 
-export const EventDetails = styled(View)`
+export const EventDetailsWrapper = styled(View)`
   flex-direction: row;
   justify-content: space-between;
   max-width: 35%;
