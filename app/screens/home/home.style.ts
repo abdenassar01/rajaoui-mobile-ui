@@ -1,10 +1,14 @@
 import {styled} from 'styled-components';
-import {View} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import {MainText} from '../../utils/text';
 
-export const Container = styled(View)`
+export const Container = styled(ScrollView)`
   width: 90%;
   margin-top: 20px;
+`;
+
+export const Spacer = styled(View)`
+  height: 70px;
 `;
 
 export const CallToActionText = styled(MainText)`
