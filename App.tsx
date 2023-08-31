@@ -5,6 +5,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {ThemeProvider} from 'styled-components';
 import {dark, light} from './app/utils/theme';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
 
 function App(): JSX.Element {
   const [theme, setTheme] = useState<string>('light');
@@ -48,12 +51,14 @@ function App(): JSX.Element {
 
   return (
     <NavigationContainer>
-      <ThemeProvider theme={theme === 'light' ? light : dark}>
-        <SafeAreaView style={styles.appwrapper}>
-          <StatusBar backgroundColor="#0E5A4C" />
-          <TabNavigator toggleTheme={handleThemeToggle} />
-        </SafeAreaView>
-      </ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider theme={theme === 'light' ? light : dark}>
+          <SafeAreaView style={styles.appwrapper}>
+            <StatusBar backgroundColor="#0E5A4C" />
+            <TabNavigator toggleTheme={handleThemeToggle} />
+          </SafeAreaView>
+        </ThemeProvider>
+      </QueryClientProvider>
     </NavigationContainer>
   );
 }
