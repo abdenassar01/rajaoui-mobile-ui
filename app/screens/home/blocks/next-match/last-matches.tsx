@@ -14,7 +14,6 @@ const LastMatches = () => {
       const res = await axios.get(
         'https://api.sofascore.com/api/v1/team/41757/events/last/0',
       );
-      console.log(res.data);
       return res.data.events;
     },
   );

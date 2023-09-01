@@ -5,7 +5,6 @@ import Home from '../../screens/home/home';
 import NavigationIcon from '../../utils/navigationIcon/NavigationIcon';
 import {ThemeType} from '../../utils/theme';
 import {withTheme} from 'styled-components';
-import Loading from '../../utils/loading/loading';
 import Settings from '../../screens/settings/settings';
 import Team from '../../screens/team/team';
 
@@ -31,6 +30,7 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
           backgroundColor: theme.secondaryBackground,
           elevation: 5,
           height: 50,
+          paddingTop: 5,
         },
       }}>
       <Tab.Screen
@@ -83,7 +83,7 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
             <NavigationIcon
               theme={theme}
               focused={focused}
-              label="Tools"
+              label="Settings"
               icon="construct"
             />
           ),
