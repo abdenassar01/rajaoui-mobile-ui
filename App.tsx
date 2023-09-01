@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Alert, SafeAreaView, StatusBar, StyleSheet} from 'react-native';
-import TabNavigator from './app/tabs/tab-navigator/tab-navigator';
+import TabNavigator from './app/navigators/tab-navigator/tab-navigator';
 import {NavigationContainer} from '@react-navigation/native';
 import {ThemeProvider} from 'styled-components';
 import {dark, light} from './app/utils/theme';
