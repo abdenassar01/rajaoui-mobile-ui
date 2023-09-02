@@ -21,3 +21,8 @@ export async function teamNationalPlayers() {
   const results = await instance.get(`${endpoint}/players`);
   return results.data.nationalPlayers;
 }
+
+export async function teamPlayersTransfers() {
+  const results = await instance.get(`${endpoint}/transfers`);
+  return results.data;
+}
