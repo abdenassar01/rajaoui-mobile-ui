@@ -1,14 +1,15 @@
 import React from 'react';
 import {Wrapper} from '../../commun/utils/utils';
-import {Container, TabText} from './team.style';
+import {Container} from './team.style';
 import TeamTab from './blocks/team-tab';
+import TabsInfos from './blocks/tabs-infos';
 
 const Team = () => {
   return (
     <Wrapper>
       <Container>
         <TeamTab />
-        <TabText>Hellloooooow</TabText>
+        <TabsInfos />
       </Container>
     </Wrapper>
   );

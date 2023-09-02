@@ -1,11 +1,18 @@
-import {View, Text} from 'react-native';
 import React from 'react';
+import {TabsWrapper} from '../team.style';
+import Trophies from './trophies';
+import Players from './players';
+import ForeignPlayets from './foreign-playets';
+import Transfers from './transfers';
 
 const TabsInfos = () => {
   return (
-    <View>
-      <Text>tabs-infos</Text>
-    </View>
+    <TabsWrapper>
+      <Trophies />
+      <Players />
+      <ForeignPlayets />
+      <Transfers />
+    </TabsWrapper>
   );
 };
 
