@@ -20,20 +20,22 @@ const TeamTab = () => {
   const {
     data: team,
     isLoading,
-    isError,
-  } = useQuery<Team>(['getting team data'], teamDetails);
+    error,
+  }: any = useQuery<Team>(['getting team data'], teamDetails);
 
   if (isLoading) {
     return <Label>loading...</Label>;
   }
-  if (isError) {
-    return <Label>error occured</Label>;
+  if (error) {
+    return <Label>erroe: {error?.message}</Label>;
   }
 
   return (
     <TeamInfoWrapper>
       <BackgroundLogo
-        source={{uri: `https://api.sofascore.app/api/v1/team/${team.id}/image`}}
+        source={{
+          uri: `https://api.sofascore.app/api/v1/team/${team.id}/image`,
+        }}
       />
       <TeamTabLeft>
         <TeamWrapper>
