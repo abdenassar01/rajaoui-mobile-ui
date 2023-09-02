@@ -3,6 +3,12 @@ type Category = {
   id: string;
 };
 
+type TeamColors = {
+  primary: string;
+  secondary: string;
+  text: string;
+};
+
 type UniqueTournomant = {
   name: string;
   id: string;
@@ -15,6 +21,7 @@ type Tournomant = {
 
 type Country = {
   name: string;
+  alpha2: string;
 };
 
 type Manager = {
@@ -47,6 +54,8 @@ type Team = {
   tournament: Tournomant;
   manager: Manager;
   venue: Venue;
+  country: Country;
+  teamColors: TeamColors;
 };
 
 export default Team;

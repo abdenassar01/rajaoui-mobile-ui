@@ -11,24 +11,45 @@ import {
   TeamTitle,
   TeamWrapper,
 } from '../team.style';
+import {useQuery} from '@tanstack/react-query';
+import {teamDetails} from '../../../../resources';
+import Team from '../../../../types/team';
+import {timstampToDate} from '../../../utils/helpers/date-converter';
 
 const TeamTab = () => {
+  const {
+    data: team,
+    isLoading,
+    isError,
+  } = useQuery<Team>(['getting team data'], teamDetails);
+
+  if (isLoading) {
+    return <Label>loading...</Label>;
+  }
+  if (isError) {
+    return <Label>error occured</Label>;
+  }
+
   return (
     <TeamInfoWrapper>
       <BackgroundLogo
-        source={{uri: 'https://api.sofascore.app/api/v1/team/41757/image'}}
+        source={{uri: `https://api.sofascore.app/api/v1/team/${team.id}/image`}}
       />
       <TeamTabLeft>
         <TeamWrapper>
           <TeamLogo
-            source={{uri: 'https://api.sofascore.app/api/v1/team/41757/image'}}
+            source={{
+              uri: `https://api.sofascore.app/api/v1/team/${team.id}/image`,
+            }}
           />
           <FlexColumnWropper>
-            <TeamTitle>Raja Club Athletic</TeamTitle>
-            <Label>Morocco</Label>
+            <TeamTitle>{team.name}</TeamTitle>
+            <Label>{team.country.name}</Label>
           </FlexColumnWropper>
         </TeamWrapper>
-        <Label>Foundation Date: 20 Mar 1949</Label>
+        <Label>
+          Foundation Date: {timstampToDate(team.foundationDateTimestamp)}
+        </Label>
       </TeamTabLeft>
       <TeamTabRight>
         <CountryFlag
@@ -36,7 +57,7 @@ const TeamTab = () => {
           style={{
             borderRadius: 3,
           }}
-          isoCode="MA"
+          isoCode={team.country.alpha2}
           size={30}
         />
       </TeamTabRight>
