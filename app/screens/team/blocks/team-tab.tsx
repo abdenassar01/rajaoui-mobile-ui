@@ -21,37 +21,38 @@ const TeamTab = () => {
     data: team,
     isLoading,
     error,
-  }: any = useQuery<Team>(['getting team data'], teamDetails);
+  } = useQuery<Team>(['getting team data'], teamDetails);
 
   if (isLoading) {
     return <Label>loading...</Label>;
   }
   if (error) {
-    return <Label>erroe: {error?.message}</Label>;
+    return <Label>error: </Label>;
   }
+
+  const {date, year} = timstampToDate(team?.foundationDateTimestamp || 0);
+  const foundationdate = date + ' ' + year;
 
   return (
     <TeamInfoWrapper>
       <BackgroundLogo
         source={{
-          uri: `https://api.sofascore.app/api/v1/team/${team.id}/image`,
+          uri: `https://api.sofascore.app/api/v1/team/${team?.id}/image`,
         }}
       />
       <TeamTabLeft>
         <TeamWrapper>
           <TeamLogo
             source={{
-              uri: `https://api.sofascore.app/api/v1/team/${team.id}/image`,
+              uri: `https://api.sofascore.app/api/v1/team/${team?.id}/image`,
             }}
           />
           <FlexColumnWropper>
-            <TeamTitle>{team.name}</TeamTitle>
-            <Label>{team.country.name}</Label>
+            <TeamTitle>{team?.name}</TeamTitle>
+            <Label>{team?.country.name}</Label>
           </FlexColumnWropper>
         </TeamWrapper>
-        <Label>
-          Foundation Date: {timstampToDate(team.foundationDateTimestamp)}
-        </Label>
+        <Label>Foundation date: {foundationdate}</Label>
       </TeamTabLeft>
       <TeamTabRight>
         <CountryFlag
@@ -59,7 +60,7 @@ const TeamTab = () => {
           style={{
             borderRadius: 3,
           }}
-          isoCode={team.country.alpha2}
+          isoCode={team?.country.alpha2 || 'MA'}
           size={30}
         />
       </TeamTabRight>

@@ -17,7 +17,6 @@ const Players = ({theme}: Props) => {
     teamPlayers,
   );
 
-  console.log(players);
   return (
     <TabItem>
       <TabIcon>
