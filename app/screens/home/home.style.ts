@@ -3,7 +3,7 @@ import {ScrollView, View} from 'react-native';
 import {MainText} from '../../utils/text';
 
 export const Container = styled(ScrollView)`
-  width: 90%;
+  width: 95%;
   margin-top: 20px;
 `;
 
