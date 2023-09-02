@@ -21,6 +21,8 @@ export const TeamInfoWrapper = styled(View)`
   padding: 10px;
   background-color: ${({theme}) => theme.secondaryBackground};
   border-radius: 10px;
+  flex-direction: row;
+  justify-content: space-between;
   position: relative;
   overflow: hidden;
 `;

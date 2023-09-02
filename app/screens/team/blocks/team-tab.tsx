@@ -1,4 +1,5 @@
 import React from 'react';
+import CountryFlag from 'react-native-country-flag';
 import {
   BackgroundLogo,
   FlexColumnWropper,
@@ -29,7 +30,16 @@ const TeamTab = () => {
         </TeamWrapper>
         <Label>Foundation Date: 20 Mar 1949</Label>
       </TeamTabLeft>
-      <TeamTabRight />
+      <TeamTabRight>
+        <CountryFlag
+          // eslint-disable-next-line react-native/no-inline-styles
+          style={{
+            borderRadius: 3,
+          }}
+          isoCode="MA"
+          size={30}
+        />
+      </TeamTabRight>
     </TeamInfoWrapper>
   );
 };
