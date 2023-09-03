@@ -22,15 +22,8 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
         headerShown: false,
         tabBarShowLabel: false,
         tabBarStyle: {
-          position: 'absolute',
-          bottom: 5,
-          left: 5,
-          right: 5,
-          borderRadius: 10,
           backgroundColor: theme.secondaryBackground,
-          elevation: 5,
-          height: 50,
-          paddingTop: 5,
+          height: 60,
         },
       }}>
       <Tab.Screen
@@ -43,6 +36,20 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
               focused={focused}
               label="Home"
               icon="home"
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Home_1"
+        children={() => <Home />}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <NavigationIcon
+              theme={theme}
+              focused={focused}
+              label="Test"
+              icon="share"
             />
           ),
         }}
