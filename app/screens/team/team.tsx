@@ -11,7 +11,7 @@ const Team = () => {
       <Container>
         <TeamTab />
         <TabsInfos />
-        <Manager managerId={791192} />
+        <Manager managerId="791192" />
       </Container>
     </Wrapper>
   );

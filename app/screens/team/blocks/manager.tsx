@@ -12,17 +12,14 @@ import CountryFlag from 'react-native-country-flag';
 import {useQuery} from '@tanstack/react-query';
 import {managerDetails} from '../../../../resources';
 import {Chase} from 'react-native-animated-spinkit';
-import {ThemeType} from '../../../utils/theme';
-import {withTheme} from 'styled-components';
 import {ManagerType} from '../../../../types/manager';
 import {getRelativeTime} from '../../../utils/helpers/date-converter';
 
 type Props = {
   managerId: string;
-  theme: ThemeType;
 };
 
-const Manager = ({managerId, theme}: Props) => {
+const Manager = ({managerId}: Props) => {
   const {
     data: manager,
     isError,
@@ -35,7 +32,7 @@ const Manager = ({managerId, theme}: Props) => {
       <ManagerSectionTab>
         {isError && <Label size="18px">error occured</Label>}
         {isLoading ? (
-          <Chase color={theme.primary} />
+          <Chase />
         ) : (
           <>
             <ManagerAvatar
@@ -67,4 +64,4 @@ const Manager = ({managerId, theme}: Props) => {
   );
 };
 
-export default withTheme(Manager);
+export default Manager;
