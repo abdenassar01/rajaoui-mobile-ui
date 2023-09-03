@@ -8,7 +8,7 @@ export const Container = styled(ScrollView)`
 `;
 
 export const TabsWrapper = styled(View)`
-  margin-top: 20px;
+  margin-top: 10px;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -72,6 +72,33 @@ export const Label = styled<any>(MainText)`
   font-size: ${props => props.size || '16px'};
 `;
 
-export const TeamTabLeft = styled(View)``;
+export const Left = styled(View)``;
 
-export const TeamTabRight = styled(View)``;
+export const Right = styled(View)``;
+
+export const ManagerSectionWrapper = styled(View)`
+  width: 100%;
+  padding-bottom: 100px;
+`;
+
+export const ManagerSectionTab = styled(View)`
+  padding: 10px;
+  background-color: ${({theme}) => theme.secondaryBackground};
+  border-radius: 10px;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 10px;
+  position: relative;
+`;
+
+export const ManagerAvatar = styled(Image)`
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+`;
+
+export const AbsoluteFlag = styled(View)`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+`;

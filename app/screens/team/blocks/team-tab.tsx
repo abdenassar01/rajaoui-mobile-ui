@@ -6,8 +6,8 @@ import {
   Label,
   TeamInfoWrapper,
   TeamLogo,
-  TeamTabLeft,
-  TeamTabRight,
+  Left,
+  Right,
   TeamTitle,
   TeamWrapper,
 } from '../team.style';
@@ -40,7 +40,7 @@ const TeamTab = () => {
           uri: `https://api.sofascore.app/api/v1/team/${team?.id}/image`,
         }}
       />
-      <TeamTabLeft>
+      <Left>
         <TeamWrapper>
           <TeamLogo
             source={{
@@ -53,8 +53,8 @@ const TeamTab = () => {
           </FlexColumnWropper>
         </TeamWrapper>
         <Label>Foundation date: {foundationdate}</Label>
-      </TeamTabLeft>
-      <TeamTabRight>
+      </Left>
+      <Right>
         <CountryFlag
           // eslint-disable-next-line react-native/no-inline-styles
           style={{
@@ -63,7 +63,7 @@ const TeamTab = () => {
           isoCode={team?.country.alpha2 || 'MA'}
           size={30}
         />
-      </TeamTabRight>
+      </Right>
     </TeamInfoWrapper>
   );
 };
