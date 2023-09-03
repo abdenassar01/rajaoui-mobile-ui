@@ -4,7 +4,6 @@ import Trophies from './trophies';
 import Players from './players';
 import ForeignPlayets from './foreign-playets';
 import Transfers from './transfers';
-import Manager from './manager';
 
 const TabsInfos = () => {
   return (
@@ -13,7 +12,6 @@ const TabsInfos = () => {
       <Players />
       <ForeignPlayets />
       <Transfers />
-      <Manager />
     </TabsWrapper>
   );
 };

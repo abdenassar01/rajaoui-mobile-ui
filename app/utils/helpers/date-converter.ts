@@ -1,3 +1,10 @@
+import TimeAgo from 'javascript-time-ago';
+import en from 'javascript-time-ago/locale/en';
+
+TimeAgo.addDefaultLocale(en);
+
+const timeAgo = new TimeAgo('en-US');
+
 export function timstampToDate(timestamp: number) {
   const a = new Date(timestamp * 1000);
   const months = [
@@ -24,4 +31,9 @@ export function timstampToDate(timestamp: number) {
   const time = hour + ':' + min;
 
   return {date, time, year};
+}
+
+export function getRelativeTime(timstamp: number): string {
+  const date = new Date(timstamp);
+  return timeAgo.format(date, 'mini');
 }

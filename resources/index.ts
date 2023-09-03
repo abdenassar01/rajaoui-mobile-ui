@@ -6,3 +6,4 @@ export {
   teamNationalPlayers,
 } from './team';
 export {playerDetails, playerPerformanceByEvent} from './player';
+export {managerDetails} from './manager';
