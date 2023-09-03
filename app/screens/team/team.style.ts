@@ -78,7 +78,7 @@ export const Right = styled(View)``;
 
 export const ManagerSectionWrapper = styled(View)`
   width: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
 `;
 
 export const ManagerSectionTab = styled(View)`
@@ -94,7 +94,7 @@ export const ManagerSectionTab = styled(View)`
 export const ManagerAvatar = styled(Image)`
   width: 100px;
   height: 100px;
-  border-radius: 10px;
+  border-radius: 5px;
 `;
 
 export const AbsoluteFlag = styled(View)`

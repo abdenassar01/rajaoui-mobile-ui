@@ -37,7 +37,7 @@ const Manager = ({managerId}: Props) => {
           <>
             <ManagerAvatar
               source={{
-                uri: 'https://api.sofascore.app/api/v1/manager/791192/image',
+                uri: `https://api.sofascore.app/api/v1/manager/${managerId}/image`,
               }}
             />
             <FlexColumnWropper>

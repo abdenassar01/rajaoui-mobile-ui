@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import CountryFlag from 'react-native-country-flag';
 import {
   BackgroundLogo,
@@ -16,7 +16,11 @@ import {teamDetails} from '../../../../resources';
 import Team from '../../../../types/team';
 import {timstampToDate} from '../../../utils/helpers/date-converter';
 
-const TeamTab = () => {
+type Props = {
+  setManagerId: (id: string) => void;
+};
+
+const TeamTab = ({setManagerId}: Props) => {
   const {
     data: team,
     isLoading,
@@ -29,6 +33,8 @@ const TeamTab = () => {
   if (error) {
     return <Label>error: </Label>;
   }
+
+  useEffect(() => setManagerId(team?.manager.id || '0'), [team?.manager]);
 
   const {date, year} = timstampToDate(team?.foundationDateTimestamp || 0);
   const foundationdate = date + ' ' + year;

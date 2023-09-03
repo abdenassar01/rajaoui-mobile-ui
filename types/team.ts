@@ -26,7 +26,7 @@ type Country = {
 
 type Manager = {
   name: string;
-  id: number;
+  id: string;
   shortName: string;
   country: Country;
 };

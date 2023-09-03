@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Wrapper} from '../../commun/utils/utils';
 import {Container} from './team.style';
 import TeamTab from './blocks/team-tab';
@@ -6,12 +6,14 @@ import TabsInfos from './blocks/tabs-infos';
 import Manager from './blocks/manager';
 
 const Team = () => {
+  const [managerId, setManagerId] = useState<string | undefined>(undefined);
+
   return (
     <Wrapper>
       <Container>
-        <TeamTab />
+        <TeamTab setManagerId={setManagerId} />
         <TabsInfos />
-        <Manager managerId="791192" />
+        {managerId && <Manager managerId={managerId} />}
       </Container>
     </Wrapper>
   );
