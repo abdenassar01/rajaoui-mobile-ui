@@ -34,7 +34,7 @@ const TeamTab = ({setManagerId}: Props) => {
     return <Label>error: </Label>;
   }
 
-  useEffect(() => setManagerId(team?.manager.id || '0'), [team?.manager]);
+  setManagerId(team?.manager.id || '0');
 
   const {date, year} = timstampToDate(team?.foundationDateTimestamp || 0);
   const foundationdate = date + ' ' + year;
