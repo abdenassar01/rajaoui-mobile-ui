@@ -10,9 +10,9 @@ export const CardWrapper = styled(View)`
   align-items: center;
   flex-direction: row;
   margin: 5px 5px;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: ${props => props.theme.secondaryBackground};
-  elevation: 3;
+  elevation: 2;
 `;
 
 export const Team = styled(View)`
