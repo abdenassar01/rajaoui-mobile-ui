@@ -18,7 +18,7 @@ export const TabsWrapper = styled(View)`
 export const TabItem = styled(TouchableOpacity)`
   padding: 10px;
   background-color: ${({theme}) => theme.secondaryBackground};
-  border-radius: 10px;
+  border-radius: 20px;
   width: 49%;
   height: 100%;
   aspect-ratio: 1/1;
@@ -31,7 +31,7 @@ export const TabIcon = styled(View)``;
 export const TeamInfoWrapper = styled(View)`
   padding: 10px;
   background-color: ${({theme}) => theme.secondaryBackground};
-  border-radius: 10px;
+  border-radius: 20px;
   flex-direction: row;
   justify-content: space-between;
   position: relative;
@@ -84,7 +84,7 @@ export const ManagerSectionWrapper = styled(View)`
 export const ManagerSectionTab = styled(View)`
   padding: 10px;
   background-color: ${({theme}) => theme.secondaryBackground};
-  border-radius: 10px;
+  border-radius: 20px;
   flex-direction: row;
   align-items: flex-end;
   gap: 10px;
@@ -94,7 +94,7 @@ export const ManagerSectionTab = styled(View)`
 export const ManagerAvatar = styled(Image)`
   width: 100px;
   height: 100px;
-  border-radius: 5px;
+  border-radius: 10px;
 `;
 
 export const AbsoluteFlag = styled(View)`

@@ -51,7 +51,7 @@ const Manager = ({managerId}: Props) => {
               <CountryFlag
                 // eslint-disable-next-line react-native/no-inline-styles
                 style={{
-                  borderRadius: 3,
+                  borderRadius: 10,
                 }}
                 isoCode={'MA'}
                 size={30}

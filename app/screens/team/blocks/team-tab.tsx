@@ -64,7 +64,7 @@ const TeamTab = ({setManagerId}: Props) => {
         <CountryFlag
           // eslint-disable-next-line react-native/no-inline-styles
           style={{
-            borderRadius: 3,
+            borderRadius: 10,
           }}
           isoCode={team?.country.alpha2 || 'MA'}
           size={30}
