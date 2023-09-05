@@ -7,13 +7,13 @@ import {
   ManagerSectionTab,
   ManagerSectionWrapper,
 } from '../team.style';
-import Title from '../../../commun/title/title';
+import Title from '../../../../commun/title/title';
 import CountryFlag from 'react-native-country-flag';
 import {useQuery} from '@tanstack/react-query';
-import {managerDetails} from '../../../../resources';
+import {managerDetails} from '../../../../../resources';
 import {Chase} from 'react-native-animated-spinkit';
-import {ManagerType} from '../../../../types/manager';
-import {getRelativeTime} from '../../../utils/helpers/date-converter';
+import {ManagerType} from '../../../../../types/manager';
+import {getRelativeTime} from '../../../../utils/helpers/date-converter';
 
 type Props = {
   managerId: string;

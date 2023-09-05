@@ -1,12 +1,12 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Home from '../../screens/home/home';
 import NavigationIcon from '../../utils/navigationIcon/NavigationIcon';
 import {ThemeType} from '../../utils/theme';
 import {withTheme} from 'styled-components';
-import Settings from '../../screens/settings/settings';
-import Team from '../../screens/team/team';
+import Team from '../../screens/tabs/team/team';
+import Home from '../../screens/tabs/home/home';
+import Settings from '../../screens/tabs/settings/settings';
 
 type Props = {
   toggleTheme: () => void;

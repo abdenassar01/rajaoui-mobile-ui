@@ -2,7 +2,7 @@ import React from 'react';
 import {Label, TabIcon, TabItem} from '../team.style';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {withTheme} from 'styled-components';
-import {ThemeType} from '../../../utils/theme';
+import {ThemeType} from '../../../../utils/theme';
 
 type Props = {
   theme: ThemeType;

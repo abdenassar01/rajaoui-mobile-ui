@@ -6,6 +6,7 @@ import {ThemeProvider} from 'styled-components';
 import {dark, light} from './app/utils/theme';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
+import 'react-native-gesture-handler';
 
 const queryClient = new QueryClient();
 

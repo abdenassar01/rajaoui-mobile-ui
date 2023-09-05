@@ -2,10 +2,10 @@ import React from 'react';
 import {Label, TabIcon, TabItem} from '../team.style';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {withTheme} from 'styled-components';
-import {ThemeType} from '../../../utils/theme';
-import {teamForeignPlayers} from '../../../../resources';
+import {ThemeType} from '../../../../utils/theme';
+import {teamForeignPlayers} from '../../../../../resources';
 import {useQuery} from '@tanstack/react-query';
-import {PlayerType} from '../../../../types/player';
+import {PlayerType} from '../../../../../types/player';
 
 type Props = {
   theme: ThemeType;

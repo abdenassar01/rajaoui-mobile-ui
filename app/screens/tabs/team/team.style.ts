@@ -1,6 +1,6 @@
 import {Image, ScrollView, TouchableOpacity, View} from 'react-native';
 import {styled} from 'styled-components';
-import {MainText} from '../../utils/text';
+import {MainText} from '../../../utils/text';
 
 export const Container = styled(ScrollView)`
   width: 95%;

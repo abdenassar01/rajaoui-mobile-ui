@@ -12,9 +12,9 @@ import {
   TeamWrapper,
 } from '../team.style';
 import {useQuery} from '@tanstack/react-query';
-import {teamDetails} from '../../../../resources';
-import Team from '../../../../types/team';
-import {timstampToDate} from '../../../utils/helpers/date-converter';
+import {teamDetails} from '../../../../../resources';
+import Team from '../../../../../types/team';
+import {timstampToDate} from '../../../../utils/helpers/date-converter';
 
 type Props = {
   setManagerId: (id: string) => void;
