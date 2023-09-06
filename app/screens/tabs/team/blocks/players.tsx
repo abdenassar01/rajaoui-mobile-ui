@@ -9,16 +9,17 @@ import {PlayerType} from '../../../../../types/player';
 
 type Props = {
   theme: ThemeType;
+  navigation: any;
 };
 
-const Players = ({theme}: Props) => {
+const Players = ({theme, navigation}: Props) => {
   const {data: players, isLoading} = useQuery<PlayerType[]>(
     ['fetching team players'],
     teamPlayers,
   );
 
   return (
-    <TabItem>
+    <TabItem onPress={() => navigation.navigate('Players')}>
       <TabIcon>
         <Ionicons name="people" size={100} color={theme.primary} />
       </TabIcon>

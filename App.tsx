@@ -7,6 +7,7 @@ import {dark, light} from './app/utils/theme';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import 'react-native-gesture-handler';
+import StackNavigator from './app/navigators/stack-navigator/stack-navigator';
 
 const queryClient = new QueryClient();
 
@@ -57,6 +58,7 @@ function App(): JSX.Element {
           <SafeAreaView style={styles.appwrapper}>
             <StatusBar backgroundColor="#0E5A4C" />
             <TabNavigator toggleTheme={handleThemeToggle} />
+            <StackNavigator />
           </SafeAreaView>
         </ThemeProvider>
       </QueryClientProvider>
