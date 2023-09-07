@@ -1,11 +1,11 @@
-import Title from '../../../../commun/title/title';
 import React from 'react';
 import {useQuery} from '@tanstack/react-query';
 import NextMatchLoader from './next-match-loader';
 import {View, Text} from 'react-native';
-import {Event} from '../../../../../types/events';
-import SimpleMatchCard from '../../../../commun/simple-match-card/simple-match-card';
-import {lastMatches} from '../../../../../resources';
+import {lastMatches} from '../../../../../../resources';
+import {Event} from '../../../../../../types/events';
+import Title from '../../../../../commun/title/title';
+import SimpleMatchCard from '../../../../../commun/simple-match-card/simple-match-card';
 
 const LastMatches = () => {
   const {data, isLoading, error} = useQuery<Event[]>(

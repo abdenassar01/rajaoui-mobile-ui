@@ -1,12 +1,19 @@
 import {createStackNavigator} from '@react-navigation/stack';
-import Settings from '../../screens/tabs/settings/settings';
+import Players from '../../screens/stack/players/Players';
+import TabNavigator from '../tab-navigator/tab-navigator';
 
 const Stack = createStackNavigator();
 
-function StackNavigator() {
+type Props = {
+  toggleTheme: () => void;
+  theme: ThemeType;
+};
+
+function StackNavigator({toggleTheme, theme}: Props) {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Players" component={<Settings />} />
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Tabs" component={TabNavigator} />
+      <Stack.Screen name="Player" component={Players} />
     </Stack.Navigator>
   );
 }

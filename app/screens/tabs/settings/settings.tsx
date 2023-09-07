@@ -1,9 +1,9 @@
 import {Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {withTheme} from 'styled-components';
-import {ThemeType} from '../../utils/theme';
-import Header from '../../commun/header/header';
-import {Wrapper} from '../../commun/utils/utils';
+import {ThemeType} from '../../../utils/theme';
+import {Wrapper} from '../../../commun/utils/utils';
+import Header from '../../../commun/header/header';
 
 type Props = {
   toggleTheme: () => void;

@@ -1,11 +1,10 @@
-import MatchCard from '../../../../commun/match-card/match-card';
-import Title from '../../../../commun/title/title';
 import React from 'react';
 import {useQuery} from '@tanstack/react-query';
 import NextMatchLoader from './next-match-loader';
-import {EventDetails} from '../../../../../types/eventDetails';
-import {Text} from 'react-native';
-import {nextMatch} from '../../../../../resources';
+import {nextMatch} from '../../../../../../resources';
+import {EventDetails} from '../../../../../../types/eventDetails';
+import Title from '../../../../../commun/title/title';
+import MatchCard from '../../../../../commun/match-card/match-card';
 
 const NextMatch = () => {
   const {data, isLoading, error} = useQuery<EventDetails>(
@@ -14,7 +13,7 @@ const NextMatch = () => {
   );
 
   if (error) {
-    return <Text>Error</Text>;
+    return null;
   }
 
   return (

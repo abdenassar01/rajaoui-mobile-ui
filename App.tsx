@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Alert, SafeAreaView, StatusBar, StyleSheet} from 'react-native';
-import TabNavigator from './app/navigators/tab-navigator/tab-navigator';
 import {NavigationContainer} from '@react-navigation/native';
 import {ThemeProvider} from 'styled-components';
 import {dark, light} from './app/utils/theme';
@@ -57,8 +56,7 @@ function App(): JSX.Element {
         <ThemeProvider theme={theme === 'light' ? light : dark}>
           <SafeAreaView style={styles.appwrapper}>
             <StatusBar backgroundColor="#0E5A4C" />
-            <TabNavigator toggleTheme={handleThemeToggle} />
-            <StackNavigator />
+            <StackNavigator toggleTheme={handleThemeToggle} />
           </SafeAreaView>
         </ThemeProvider>
       </QueryClientProvider>

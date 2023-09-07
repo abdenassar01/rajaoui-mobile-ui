@@ -1,6 +1,6 @@
 import {Image, ImageBackground, ScrollView, View} from 'react-native';
 import {styled} from 'styled-components';
-import {MainText} from '../../../utils/text';
+import {MainText} from '../../../../utils/text';
 
 export const HeroWrapper = styled(ScrollView)``;
 export const CardWrapper = styled(ImageBackground)`
