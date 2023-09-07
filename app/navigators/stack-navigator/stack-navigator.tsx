@@ -4,12 +4,7 @@ import TabNavigator from '../tab-navigator/tab-navigator';
 
 const Stack = createStackNavigator();
 
-type Props = {
-  toggleTheme: () => void;
-  theme: ThemeType;
-};
-
-function StackNavigator({toggleTheme, theme}: Props) {
+function StackNavigator() {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Tabs" component={TabNavigator} />

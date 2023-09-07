@@ -7,11 +7,12 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import 'react-native-gesture-handler';
 import StackNavigator from './app/navigators/stack-navigator/stack-navigator';
+import {useRootStore} from './models/root';
 
 const queryClient = new QueryClient();
 
 function App(): JSX.Element {
-  const [theme, setTheme] = useState<string>('light');
+  const {currentTheme, toggleTheme} = useRootStore();
 
   const storeTheme = async (value: string) => {
     try {
@@ -33,18 +34,18 @@ function App(): JSX.Element {
   };
 
   const handleThemeToggle = () => {
-    if (theme === 'light') {
-      setTheme('dark');
+    if (currentTheme === 'light') {
       storeTheme('dark');
       return;
     }
-    setTheme('light');
     storeTheme('light');
   };
 
   if (getTheme() !== undefined) {
     getTheme()
-      .then(currTheme => currTheme !== undefined && setTheme(currTheme))
+      .then(
+        theme => theme !== undefined && theme !== currentTheme && toggleTheme(),
+      )
       .catch(e => Alert.alert('Error ' + e?.message));
   } else {
     storeTheme('light');
@@ -53,10 +54,10 @@ function App(): JSX.Element {
   return (
     <NavigationContainer>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider theme={theme === 'light' ? light : dark}>
+        <ThemeProvider theme={currentTheme === 'light' ? light : dark}>
           <SafeAreaView style={styles.appwrapper}>
             <StatusBar backgroundColor="#0E5A4C" />
-            <StackNavigator toggleTheme={handleThemeToggle} />
+            <StackNavigator />
           </SafeAreaView>
         </ThemeProvider>
       </QueryClientProvider>

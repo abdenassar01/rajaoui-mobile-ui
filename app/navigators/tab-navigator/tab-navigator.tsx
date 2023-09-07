@@ -9,11 +9,10 @@ import Home from '../../screens/tabs/home/home';
 import Settings from '../../screens/tabs/settings/settings';
 
 type Props = {
-  toggleTheme: () => void;
   theme: ThemeType;
 };
 
-const TabNavigator = ({toggleTheme, theme}: Props) => {
+const TabNavigator = ({theme}: Props) => {
   const Tab = createBottomTabNavigator();
 
   return (
@@ -84,7 +83,7 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
       />
       <Tab.Screen
         name="Settings"
-        children={() => <Settings toggleTheme={toggleTheme} />}
+        children={() => <Settings />}
         options={{
           tabBarIcon: ({focused}) => (
             <NavigationIcon
