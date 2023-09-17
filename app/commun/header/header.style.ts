@@ -1,6 +1,7 @@
 import {Image, View} from 'react-native';
 import {styled} from 'styled-components';
 import {MainText} from '../../utils/text';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 export const HeaderWrapper = styled(View)`
   padding: 10px 0;
@@ -27,7 +28,13 @@ export const Avatar = styled(Image)`
   border-radius: 50px;
 `;
 
-export const Title = styled(MainText)`
-  font-size: 30px;
+export const Title = styled<any>(MainText)`
+  font-size: ${({size}) => size || '30px'};
   color: ${({theme}) => theme.primary};
+`;
+
+export const GoBackIconWrapper = styled(TouchableOpacity)`
+  background-color: ${({theme}) => theme.primary};
+  padding: 10px;
+  border-radius: 5px;
 `;

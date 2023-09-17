@@ -1,5 +1,5 @@
 import {createStackNavigator} from '@react-navigation/stack';
-import Players from '../../screens/stack/players/Players';
+import Players from '../../screens/stack/players/PlayersScreen';
 import TabNavigator from '../tab-navigator/tab-navigator';
 
 const Stack = createStackNavigator();
