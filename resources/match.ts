@@ -9,5 +9,5 @@ export async function nextMatch() {
 
 export async function lastMatches() {
   const results = await instance.get(`${endpoint}/last/0`);
-  return results.data.events;
+  return results.data.events.slice(-6, results.data.events.length).reverse();
 }
