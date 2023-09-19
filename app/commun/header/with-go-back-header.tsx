@@ -21,12 +21,13 @@ const WithGoBackHeader = ({theme}: {theme: ThemeType}) => {
       <HeaderWrapper>
         <GoBackIconWrapper onPress={() => navigation.goBack()}>
           <Ionicons
-            color={theme.secondaryBackground}
-            size={20}
-            name="caret-back"
+            color={theme.secondary}
+            size={30}
+            name="chevron-back-outline"
           />
         </GoBackIconWrapper>
         <Title size="20px">Raja CA Players</Title>
+        <Title />
       </HeaderWrapper>
       <LineSeparator />
     </>

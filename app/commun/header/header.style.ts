@@ -34,7 +34,7 @@ export const Title = styled<any>(MainText)`
 `;
 
 export const GoBackIconWrapper = styled(TouchableOpacity)`
-  background-color: ${({theme}) => theme.primary};
-  padding: 10px;
+  /* background-color: ${({theme}) => theme.primary};
+  padding: 10px; */
   border-radius: 5px;
 `;
