@@ -29,7 +29,7 @@ export const Avatar = styled(Image)`
 `;
 
 export const Title = styled<any>(MainText)`
-  font-size: ${({size}) => size || '30px'};
+  font-size: ${({size}) => size || '25px'};
   color: ${({theme}) => theme.primary};
 `;
 
