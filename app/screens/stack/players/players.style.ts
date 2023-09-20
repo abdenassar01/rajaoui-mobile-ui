@@ -31,6 +31,12 @@ export const PlayerInfos = styled(View)`
   gap: 15px;
 `;
 
+export const Heading = styled(MainText)`
+  font-size: 22px;
+  color: ${({theme}) => theme.primary};
+  padding: 10px;
+`;
+
 export const PlayerName = styled(MainText)`
   font-size: 16px;
   color: ${({theme}) => theme.text};
@@ -39,6 +45,7 @@ export const PlayerName = styled(MainText)`
 export const PlayerJerseyNumber = styled(MainText)`
   font-size: 24px;
   color: ${({theme}) => theme.primary};
+  width: 30px;
 `;
 
 export const PlayerNameAndNationality = styled(View)``;

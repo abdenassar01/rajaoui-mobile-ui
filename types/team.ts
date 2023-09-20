@@ -19,7 +19,7 @@ type Tournomant = {
   uniqueTournament: UniqueTournomant;
 };
 
-type Country = {
+export type Country = {
   name: string;
   alpha2: string;
 };

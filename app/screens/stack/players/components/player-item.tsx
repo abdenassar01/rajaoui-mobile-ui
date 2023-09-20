@@ -11,26 +11,37 @@ import {
 } from '../players.style';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CountryFlag from 'react-native-country-flag';
-import {ThemeType} from '../../../../utils/theme';
-import {withTheme} from 'styled-components';
+import {useTheme} from 'styled-components';
+import {PlayerType} from '../../../../../types/player';
 
 type Props = {
-  theme: ThemeType;
+  player: PlayerType;
 };
 
-const PlayerItem = ({theme}: Props) => {
+const PlayerItem = ({player}: Props) => {
+  const theme = useTheme();
+
   return (
     <PlayerItemWrapper>
       <PlayerInfos>
-        <PlayerJerseyNumber>10</PlayerJerseyNumber>
+        <PlayerJerseyNumber>{player.player.jerseyNumber}</PlayerJerseyNumber>
         <PlayerAvatar
-          source={{uri: 'https://api.sofascore.app/api/v1/player/100386/image'}}
+          source={{
+            uri:
+              `https://api.sofascore.app/api/v1/player/${player.player.id}/image` ||
+              'https://i.imgur.com/t2nEZeG.png',
+          }}
         />
         <PlayerNameAndNationality>
-          <PlayerName>Steven Berghuis</PlayerName>
+          <PlayerName>{player.player.name}</PlayerName>
           <PlayerNationalityWrapper>
-            <CountryFlag isoCode="MA" size={16} />
-            <PlayerNationalityText>Morocco</PlayerNationalityText>
+            <CountryFlag
+              isoCode={player.player.country.alpha2 || 'MA'}
+              size={16}
+            />
+            <PlayerNationalityText>
+              {player.player.country.name}
+            </PlayerNationalityText>
           </PlayerNationalityWrapper>
         </PlayerNameAndNationality>
       </PlayerInfos>
@@ -39,4 +50,4 @@ const PlayerItem = ({theme}: Props) => {
   );
 };
 
-export default withTheme(PlayerItem);
+export default PlayerItem;
