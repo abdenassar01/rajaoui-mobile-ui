@@ -11,8 +11,8 @@ export type ThemeType = {
 // #33A357 -> simple green
 
 const appColors = {
-  primary: '#0E5A4C',
-  secondary: '#258082',
+  primary: '#258082',
+  secondary: '#0E5A4C',
   tertiary: '#D4B33B',
   white: 'white',
   black: '#242526',

@@ -1,4 +1,6 @@
 import {View} from 'react-native';
 import {styled} from 'styled-components';
 
-export const PlayerWrapper = styled(View)``;
+export const PlayerWrapper = styled(View)`
+  background-color: ${({theme}) => theme.secondaryBackground};
+`;

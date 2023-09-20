@@ -12,7 +12,7 @@ export const CardWrapper = styled(View)`
   margin: 5px 5px;
   border-radius: 20px;
   background-color: ${props => props.theme.secondaryBackground};
-  elevation: 2;
+  elevation: 10;
 `;
 
 export const Team = styled(View)`
@@ -23,7 +23,7 @@ export const Team = styled(View)`
 export const Name = styled(MainText)`
   padding: 0 10px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   width: 120px;
   text-align: right;
   color: ${props => props.theme.text};
