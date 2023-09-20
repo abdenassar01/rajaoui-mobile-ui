@@ -27,10 +27,9 @@ const PlayerItem = ({player}: Props) => {
         <PlayerJerseyNumber>{player.player.jerseyNumber}</PlayerJerseyNumber>
         <PlayerAvatar
           source={{
-            uri:
-              `https://api.sofascore.app/api/v1/player/${player.player.id}/image` ||
-              'https://i.imgur.com/t2nEZeG.png',
+            uri: `https://api.sofascore.app/api/v1/player/${player.player.id}/image`,
           }}
+          defaultSource={require('../../../../../assets/images/avatar.png')}
         />
         <PlayerNameAndNationality>
           <PlayerName>{player.player.name}</PlayerName>
