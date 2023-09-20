@@ -1,10 +1,10 @@
 import {View} from 'react-native';
 import {styled} from 'styled-components';
 
-export const Wrapper = styled(View)`
+export const Wrapper = styled<any>(View)`
   /* justify-content: center; */
   align-items: center;
   width: 100%;
-  background-color: ${({theme}) => theme.background};
+  background-color: ${({theme, background}) => background || theme.background};
   flex: 1;
 `;

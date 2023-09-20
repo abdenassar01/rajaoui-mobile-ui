@@ -10,6 +10,7 @@ export const FloatingHeaderWrapper = styled<any>(View)`
   align-items: center;
   padding: 10px;
   border-radius: 5px;
+  elevation: 10;
 `;
 
 export const HeaderWrapper = styled(View)`
