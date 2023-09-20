@@ -11,7 +11,14 @@ import {
 } from '../players.style';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CountryFlag from 'react-native-country-flag';
-const PlayerItem = () => {
+import {ThemeType} from '../../../../utils/theme';
+import {withTheme} from 'styled-components';
+
+type Props = {
+  theme: ThemeType;
+};
+
+const PlayerItem = ({theme}: Props) => {
   return (
     <PlayerItemWrapper>
       <PlayerInfos>
@@ -22,14 +29,14 @@ const PlayerItem = () => {
         <PlayerNameAndNationality>
           <PlayerName>Steven Berghuis</PlayerName>
           <PlayerNationalityWrapper>
-            <CountryFlag isoCode="MA" size={20} />
+            <CountryFlag isoCode="MA" size={16} />
             <PlayerNationalityText>Morocco</PlayerNationalityText>
           </PlayerNationalityWrapper>
         </PlayerNameAndNationality>
       </PlayerInfos>
-      <Ionicons name="arrow-forward-outline" />
+      <Ionicons color={theme.primary} name="arrow-forward-outline" size={24} />
     </PlayerItemWrapper>
   );
 };
 
-export default PlayerItem;
+export default withTheme(PlayerItem);

@@ -11,6 +11,7 @@ export const PlayerListWrapper = styled(ScrollView)`
 export const PlayerItemWrapper = styled(TouchableOpacity)`
   width: 100%;
   padding: 0 10px;
+  padding-top: 10px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -30,14 +31,22 @@ export const PlayerInfos = styled(View)`
   gap: 15px;
 `;
 
-export const PlayerName = styled(MainText)``;
+export const PlayerName = styled(MainText)`
+  font-size: 16px;
+`;
 
-export const PlayerJerseyNumber = styled(MainText)``;
+export const PlayerJerseyNumber = styled(MainText)`
+  font-size: 24px;
+`;
 
 export const PlayerNameAndNationality = styled(View)``;
 
-export const PlayerNationalityWrapper = styled(View)``;
+export const PlayerNationalityWrapper = styled(View)`
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+`;
 
-export const PlayerNationalityText = styled(MainText)``;
-
-export const PlayerNationalityFlag = styled(View)``;
+export const PlayerNationalityText = styled(MainText)`
+  font-size: 12px;
+`;
