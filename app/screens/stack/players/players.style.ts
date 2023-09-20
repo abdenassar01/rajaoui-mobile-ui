@@ -33,10 +33,12 @@ export const PlayerInfos = styled(View)`
 
 export const PlayerName = styled(MainText)`
   font-size: 16px;
+  color: ${({theme}) => theme.text};
 `;
 
 export const PlayerJerseyNumber = styled(MainText)`
   font-size: 24px;
+  color: ${({theme}) => theme.primary};
 `;
 
 export const PlayerNameAndNationality = styled(View)``;
@@ -49,4 +51,5 @@ export const PlayerNationalityWrapper = styled(View)`
 
 export const PlayerNationalityText = styled(MainText)`
   font-size: 12px;
+  color: ${({theme}) => theme.text};
 `;
