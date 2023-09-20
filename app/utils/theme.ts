@@ -1,5 +1,6 @@
 export type ThemeType = {
   background: string;
+  secondaryBackground: string;
   primary: string;
   secondary: string;
   tertiary: string;
@@ -19,6 +20,7 @@ const appColors = {
 
 export const light: ThemeType = {
   background: '#F7F7F7',
+  secondaryBackground: 'white',
   text: '#242526',
   helperText: '#B6B6B6',
   ...appColors,
@@ -26,6 +28,7 @@ export const light: ThemeType = {
 
 export const dark: ThemeType = {
   background: '#18191A',
+  secondaryBackground: '#242526',
   text: 'white',
   helperText: '#B6B6B6',
   ...appColors,

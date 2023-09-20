@@ -1,17 +1,18 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Home from '../../screens/home/home';
 import NavigationIcon from '../../utils/navigationIcon/NavigationIcon';
 import {ThemeType} from '../../utils/theme';
 import {withTheme} from 'styled-components';
+import Team from '../../screens/tabs/team/team';
+import Home from '../../screens/tabs/home/home';
+import Settings from '../../screens/tabs/settings/settings';
 
 type Props = {
-  toggleTheme: () => void;
   theme: ThemeType;
 };
 
-const TabNavigator = ({toggleTheme, theme}: Props) => {
+const TabNavigator = ({theme}: Props) => {
   const Tab = createBottomTabNavigator();
 
   return (
@@ -20,19 +21,13 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
         headerShown: false,
         tabBarShowLabel: false,
         tabBarStyle: {
-          position: 'absolute',
-          bottom: 5,
-          left: 5,
-          right: 5,
-          borderRadius: 10,
-          backgroundColor: 'white',
-          elevation: 5,
-          height: 50,
+          backgroundColor: theme.secondaryBackground,
+          height: 60,
         },
       }}>
       <Tab.Screen
         name="Home"
-        children={() => <Home toggleTheme={toggleTheme} />}
+        children={() => <Home />}
         options={{
           tabBarIcon: ({focused}) => (
             <NavigationIcon
@@ -45,22 +40,36 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
         }}
       />
       <Tab.Screen
-        name="Seting"
-        children={() => <Home toggleTheme={toggleTheme} />}
+        name="Home_1"
+        children={() => <Home />}
         options={{
           tabBarIcon: ({focused}) => (
             <NavigationIcon
               theme={theme}
               focused={focused}
-              label="Settings"
-              icon="settings"
+              label="Test"
+              icon="share"
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Team"
+        children={() => <Team />}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <NavigationIcon
+              theme={theme}
+              focused={focused}
+              label="Team"
+              icon="football"
             />
           ),
         }}
       />
       <Tab.Screen
         name="Tools"
-        children={() => <Home toggleTheme={toggleTheme} />}
+        children={() => <Home />}
         options={{
           tabBarIcon: ({focused}) => (
             <NavigationIcon
@@ -73,14 +82,14 @@ const TabNavigator = ({toggleTheme, theme}: Props) => {
         }}
       />
       <Tab.Screen
-        name="Construct"
-        children={() => <Home toggleTheme={toggleTheme} />}
+        name="Settings"
+        children={() => <Settings />}
         options={{
           tabBarIcon: ({focused}) => (
             <NavigationIcon
               theme={theme}
               focused={focused}
-              label="Tools"
+              label="Settings"
               icon="construct"
             />
           ),
