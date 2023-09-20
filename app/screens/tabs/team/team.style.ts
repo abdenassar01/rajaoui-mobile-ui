@@ -3,7 +3,7 @@ import {styled} from 'styled-components';
 import {MainText} from '../../../utils/text';
 
 export const Container = styled(ScrollView)`
-  width: 95%;
+  width: 100%;
   margin-top: 20px;
 `;
 

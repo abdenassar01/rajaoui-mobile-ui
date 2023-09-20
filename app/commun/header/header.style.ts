@@ -4,7 +4,7 @@ import {MainText} from '../../utils/text';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
 export const FloatingHeaderWrapper = styled<any>(View)`
-  width: 95%;
+  width: 100%;
   margin: 5px;
   background-color: ${({theme}) => theme.secondaryBackground};
   align-items: center;

@@ -1,9 +1,8 @@
 import {Image, TouchableOpacity, View} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
 import {styled} from 'styled-components';
 import {MainText} from '../../../utils/text';
 
-export const PlayerListWrapper = styled(ScrollView)`
+export const PlayerListWrapper = styled(View)`
   width: 100%;
   margin-top: 20px;
 `;
@@ -11,7 +10,6 @@ export const PlayerListWrapper = styled(ScrollView)`
 export const PlayerItemWrapper = styled(TouchableOpacity)`
   width: 100%;
   padding: 0 10px;
-  padding-top: 10px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -21,8 +19,8 @@ export const PlayerItemWrapper = styled(TouchableOpacity)`
 `;
 
 export const PlayerAvatar = styled(Image)`
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 `;
 
 export const PlayerInfos = styled(View)`
