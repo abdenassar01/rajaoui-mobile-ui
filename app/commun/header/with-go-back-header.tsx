@@ -3,6 +3,7 @@ import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {
+  FloatingHeaderWrapper,
   GoBackIconWrapper,
   HeaderWrapper,
   LineSeparator,
@@ -17,7 +18,7 @@ const WithGoBackHeader = ({theme}: {theme: ThemeType}) => {
   const navigation = useNavigation<StackNavigationProp<any>>();
 
   return (
-    <>
+    <FloatingHeaderWrapper>
       <HeaderWrapper>
         <GoBackIconWrapper onPress={() => navigation.goBack()}>
           <Ionicons
@@ -30,7 +31,7 @@ const WithGoBackHeader = ({theme}: {theme: ThemeType}) => {
         <Title />
       </HeaderWrapper>
       <LineSeparator />
-    </>
+    </FloatingHeaderWrapper>
   );
 };
 

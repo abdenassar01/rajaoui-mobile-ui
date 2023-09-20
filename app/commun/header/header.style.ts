@@ -3,12 +3,20 @@ import {styled} from 'styled-components';
 import {MainText} from '../../utils/text';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
+export const FloatingHeaderWrapper = styled<any>(View)`
+  width: 95%;
+  margin: 5px;
+  background-color: ${({theme}) => theme.secondaryBackground};
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+`;
+
 export const HeaderWrapper = styled(View)`
-  padding: 10px 0;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
 `;
 
 export const LineSeparator = styled(View)`
