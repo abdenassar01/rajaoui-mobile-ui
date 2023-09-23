@@ -16,9 +16,7 @@ import {EventDetails} from '../../../types/eventDetails';
 import {timstampToDate} from '../../utils/helpers/date-converter';
 
 const MatchCard = ({match}: {match?: EventDetails}) => {
-  const {date, time} = timstampToDate(
-    match?.time?.currentPeriodStartTimestamp || 0,
-  );
+  const {date, time} = timstampToDate(match?.startTimestamp || 0);
 
   return (
     <MatchCardWrapper

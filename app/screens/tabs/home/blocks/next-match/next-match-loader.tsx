@@ -1,8 +1,8 @@
 import React from 'react';
 import {Chase} from 'react-native-animated-spinkit';
 import {withTheme} from 'styled-components';
-import {ThemeType} from '../../../../utils/theme';
 import {Wrapper} from './next-match.styles';
+import { ThemeType } from '../../../../../utils/theme';
 
 type Props = {
   theme: ThemeType;

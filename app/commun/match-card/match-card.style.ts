@@ -16,18 +16,18 @@ export const EventDetailsWrapper = styled(View)`
   max-width: 35%;
 
   position: absolute;
-  left: 22.5%;
+  left: 20%;
   bottom: 9%;
 `;
 
 export const TournomentLogo = styled(Image)`
-  width: 70px;
-  height: 70px;
+  width: 200px;
+  height: 200px;
+  opacity: 0.3;
 
   position: absolute;
-  left: 12px;
-  bottom: 17%;
-  bottom: 9%;
+  left: -50px;
+  bottom: -5%;
 `;
 
 export const TeamLogo = styled(Image)`
@@ -39,14 +39,20 @@ export const TeamLogo = styled(Image)`
 export const FixtureTime = styled(View)`
   flex-direction: row;
   align-items: center;
+  width: 160px;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: ${({theme}) => theme.background};
 `;
 
 export const Time = styled(MainText)`
-  font-size: 8px;
+  font-size: 12px;
+  color: ${({theme}) => theme.text};
 `;
 
 export const Date = styled(MainText)`
-  font-size: 10px;
+  font-size: 14px;
+  color: ${({theme}) => theme.text};
 `;
 
 export const MatchTeams = styled(View)`
